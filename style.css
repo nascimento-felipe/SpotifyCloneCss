@@ -1,0 +1,46 @@
+/*
+* color: #f7b74d; cor de fundo do spotify.
+*/
+
+body {
+   height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 99%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #1ed75d;
+}
+
+.mainContent {
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    padding: 3px 60px 3px 60px;
+    border-radius: 20px;
+
+}
