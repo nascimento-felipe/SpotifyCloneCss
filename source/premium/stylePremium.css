@@ -1,37 +1,99 @@
-
 body {
+    margin: 0;
+    padding: 0;
     height: 100vh;
- }
- 
- ul {
-     list-style-type: none;
-     margin: 0;
-     padding: 0;
-     overflow: hidden;
-     background-color: #333;
-     position: fixed;
-     top: 0;
-     width: 99%;
-     font-family: 'Montserrat', sans-serif;
- }
- 
- li {
-     float: right;
- }
- 
- li a {
-     display: block;
-     color: white;
-     text-align: center;
-     padding: 14px 16px;
-     text-decoration: none;
- }
- 
- li a:hover {
-     color: #1ed75d;
- }
- 
- .mainContent {
-     text-align: center;
-     margin-top: 50px;
- }
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-background {
+    background-color: #509bf5;
+}
+
+ul.big-navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(14, 12, 12, 0.8);
+    position: fixed;
+    top: 0;
+    width: 99%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #1ed75d;
+}
+
+.topContent {
+    text-align: left;
+    margin-top: 50px;
+    background-color: #509bf5;
+    color: white;
+    height: 81%;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.leftSpace {
+    margin-left: 40px;
+    max-width: 70%;
+}
+
+button {
+    padding: 10px 40px 10px 40px;
+    border-radius: 25px;
+    background-color: #1bb852;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+button:hover {
+    background-color: #1ed45f;
+    cursor: pointer;
+}
+
+.midPage {
+    display: grid;
+    margin-top: 64px;
+    color: #222326;
+    text-align: center;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "h1 h1 h1 h1" 
+                "pq1 pq2 pq3 pq4";
+}
+.midPage h1 {
+    font-size: 42px;
+    font-weight: 600;
+    grid-area: h1;
+}
+
+.midPage h4 {
+    font-weight: 300;
+}
