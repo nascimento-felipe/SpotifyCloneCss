@@ -1,15 +1,28 @@
 /*
 * color: #f7b74d; cor de fundo do spotify.
-color: #f48172; cor do lado do spotify.
+* color: #f48172; cor do lado do spotify.
+* align-(): alinhamento vertical.
+* justify-(): alinhamento horizontal.
 */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    scrollbar-width: none;
+}
 
 body {
     height: 100vh;
+    width: 100vw;
     background: linear-gradient(0.25turn, #f48172, #f7b74d, #f48172);
     font-family: 'Montserrat', sans-serif;
 }
 
 ul.big-navbar {
+    width: 100%;
+
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -17,7 +30,6 @@ ul.big-navbar {
     background-color: rgba(14, 12, 12, 0.8);
     position: fixed;
     top: 0;
-    width: 99%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
@@ -39,21 +51,32 @@ li a:hover {
 }
 
 .mainContent {
+    height: 100vh;
+    width: 100vw;
+
     color: white;
-    text-align: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: center;
 }
 
-h1 {
+.mainContent h1 {
     font-size: 64px;
     font-weight: 600;
 }
 
-p {
+.mainContent h1+p {
+    margin: 1rem;
+}
+
+.mainContent p {
     font-size: 14px;
     font-weight: 600;
 }
 
-button {
+.mainContent button {
     padding: 5px 60px 5px 60px;
     border-radius: 25px;
     background-color: #1bb852;
@@ -61,10 +84,16 @@ button {
     color: white;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
-
-button:hover {
+.mainContent button:hover {
     background-color: #1ed45f;
     cursor: pointer;
+}
+
+footer {
+    height: 200px;
+    width: 100%;
+    background: black;
 }
