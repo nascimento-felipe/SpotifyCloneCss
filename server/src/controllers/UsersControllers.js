@@ -1,26 +1,32 @@
 const knex = require('../database/connection')
 
-class UsersController {
+const UsersController = () => {
 
-    async create(request, response) {
-        const{
-            email,
-            password,
-        } = request.body;
+    async function create(request, response) {
 
-        const trx = knex.transaction();
+        try {
+            const {
+                email,
+                password,
+            } = request.body;
 
-        const newUser = {
-            email,
-            password
-        };
-        
-        await trx('users').insert(newUser);
-        await trx.commit();
+            const trx = knex.transaction();
 
-        return response.json({
-            ...newUser
-        })
+            const newUser = {
+                email,
+                password
+            };
+
+            await trx('users').insert(newUser)
+            await trx.commit();
+
+            return response.status(201).json({
+                ...newUser
+            })
+
+        } catch (err) {
+            console.log(err)
+        }
     }
 };
 
