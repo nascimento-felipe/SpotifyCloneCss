@@ -1,10 +1,15 @@
 # SpotifyCloneCss
- Description:
+ ### Description:
 
-    This is a Spotify Web clone that I'm doing to improve my css skills ans my js skills.
-    
-   The ideia is to do a website with login and signup, not make a music app. Maybe after this I do a mobile app and try to make something like a music player.
+   * This is a Spotify Web clone that I'm doing to improve my css skills ans my js skills. 
+   * The ideia is to do a website with login and signup, not make a music app. Maybe after this I do a mobile app and try to make something like a music player.
+   * Feel free to use to study or get new ideias from it.
+   
+### How to use:
+1. Clone this repository.
+``
+git clone https://github.com/nascimento-felipe/SpotifyCloneCss
+``
 
-    It's in the beginning of the development
-
-    Feel free to use to study or get new ideias from it.
+2. Use the "yarn dev" script to run the server.
+  * The server is used only to create a user in the database, if u are not going to use it, u can just ignore this.
