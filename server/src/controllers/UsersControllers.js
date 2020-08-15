@@ -1,38 +1,31 @@
-const knex = require('../database')
+const knex = require('../database');
+const {
+    orWhereNotExists
+} = require('../database');
 
 module.exports = {
     async index(req, res) {
         const results = await knex('users')
-            
+
         return res.json(results);
+    },
+
+    async create(req, res, next) {
+        try {
+
+            const {
+                email,
+                password
+            } = req.body;
+
+            await knex('users').insert({
+                email,
+                password
+            })
+
+            return res.status(201).send();
+        } catch (error) {
+            next(error)
+        }
     }
-
-
-
-
-    // async create(request, response) {
-    //     try {
-    //         const {
-    //             email,
-    //             password,
-    //         } = request.body;
-
-    //         const trx = knex.transaction();
-
-    //         const newUser = {
-    //             email,
-    //             password
-    //         };
-
-    //         await trx('users').insert(newUser)
-    //         await trx.commit();
-
-    //         return response.status(201).json({
-    //             ...newUser
-    //         })
-
-    //     } catch (err) {
-    //         console.log(err)
-    //     }
-    // }
 };
