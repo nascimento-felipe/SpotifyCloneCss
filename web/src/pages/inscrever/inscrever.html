@@ -6,23 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
 
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="../../assets/bibble.ico" type="image/x-icon">
 </head>
 
 <body>
 
+    <div class="welcome">
+        <h1>Welcome to Spotify Team.</h1>
+        <span>It's nice to have you here.</span>
+    </div>
+
     <main>
-        <form action=handleSubmit()>
-            <h2>Digite seu email e sua senha para inscrição.</h2>
-            
-            <input type="email" placeholder="example@example.com">
-            <input type="password"> <br />
+        <form onsubmit={handleSubmit()}>
+            <h3>Digite seu email e sua senha para inscrição.</h3>
+
+            <input type="email" placeholder="Example@example.com">
+            <input type="password" placeholder="Sua senha"> <br />
             <button type="submit">Enviar</button>
         </form>
     </main>
 
 </body>
 
-<script src="scripts.js"></script>
+<script>
+    const api = require('../../services/api')
+
+    async function handleSubmit([data]) {
+        await api.post('users', data)
+
+        return alert('Usuário criado com sucesso!').then(
+            window.location.href = "http://127.0.0.1:5500/src/index.html"
+        )
+    }
+</script>
+
 </html>

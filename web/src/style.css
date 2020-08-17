@@ -11,13 +11,13 @@
     box-sizing: border-box;
 
     scrollbar-width: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
     height: 100vh;
     width: 100vw;
     background: linear-gradient(0.25turn, #f48172, #f7b74d, #f48172);
-    font-family: 'Montserrat', sans-serif;
 }
 
 ul.big-navbar {
