@@ -12,7 +12,7 @@ git clone https://github.com/nascimento-felipe/SpotifyCloneCss
 ```
 
 2. Use the "yarn dev" script to run the server.
-* The server is used only to create a user in the database, if u are not going to use it, u can just ignore this.
+* The server is used only to create a user in the database, if you are not going to use it, you can just ignore this.
 
 ### Development:
 * Server:
